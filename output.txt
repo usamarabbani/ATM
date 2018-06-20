@@ -1,0 +1,63 @@
+Input
+ATM_A1
+A11
+B111
+A12
+&*(*&)
+mypassword
+100
+25
+25
+15
+quit
+
+Output
+States of two Banks
+
+Assume all accounts have $40.0 preloaded.
+BankofA (2 customers)
+Customer with Cash Card (bankid: A, account number #: 11), expires on 2015-01-01, password: mypassword
+Customer with Cash Card (bankid: A, account number #: 12), expires on 2015-10-15, password: mypassword
+
+BankofB (3 customers)
+Customer with Cash Card (bankid: B, account number #: 111), expires on 2018-02-06, password: mypassword
+Customer with Cash Card (bankid: B, account number #: 122), expires on 2013-04-19, password: mypassword
+Customer with Cash Card (bankid: B, account number #: 133), expires on 2014-03-05, password: mypassword
+
+States of four ATMs (2 for each Bank)
+ATM_A1: (ATM1 from BankofA)
+	The maximum amount of cash a card can widthraw per day: $50.0
+ATM_A2: (ATM2 from BankofA)
+	The maximum amount of cash a card can widthraw per day: $50.0
+ATM_B1: (ATM1 from BankofB)
+	The maximum amount of cash a card can widthraw per day: $50.0
+ATM_B2: (ATM2 from BankofB)
+	The maximum amount of cash a card can widthraw per day: $50.0
+
+------------------------------------------------------------------------------
+Now, your program is in an interactive mode. % means the prompt on your cmd (shell).
+
+Enter your choice of ATM
+ATM_A1
+Enter your card
+A11
+This card is expired and returned to you.
+Enter your card
+B111
+This card is not supported by this ATM
+Enter your card
+A12
+The card is accepted. Please enter your password.
+&*(*&)
+This is a wrong password. Enter your password.
+mypassword
+Authorization is accepted. Start your transaction by entering the amount to withdraw.
+100
+This amount exceeds the maximum amount you can withdraw per transaction. Please enter the amount or quit.
+25
+$25.0 is withdrawn from your account. The remaining balance of this account is $15.0.  If you have more transactions, enter the amount or quit.
+25
+The amount exceeds the current balance. Enter another amount or quit.
+15
+$15.0 is withdrawn from your account. The remaining balance of this account is $0.0.  If you have more transactions, enter the amount or quit.
+quit
